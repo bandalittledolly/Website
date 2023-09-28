@@ -1,1 +1,158 @@
-Em desenvolvimento.
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Littledolly</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+    <header class="navbar navbar-expand-lg navbar-dark">
+        <nav class="container">
+            <a class="navbar-brand" href="#">Littledolly</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                </ul>
+            </div>
+            <button id="dark-mode-toggle" class="btn">
+                <i id="dark-mode-icon" class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="container mt-5 section bg-light text-dark animated fadeIn">
+        <h2>Artistas</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Nossos artistas</p>
+            </div>
+            <div class="col-md-6">
+                <img src="/imagens/artista.jpg" alt="Artista" class="section-img w-auto p-3">
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5 section bg-light text-dark animated fadeIn">
+        <h2>Bastidores dos Shows</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Nossos bastidores.</p>
+            </div>
+            <div class="col-md-6">
+               <!-- <img src="bastidores.jpg" alt="Bastidores" class="section-img"> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5 section bg-light text-dark animated fadeIn">
+        <h2>Sobre</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Veja nosso sobre.</p>
+            </div>
+            <div class="col-md-6">
+               <!-- <img src="sobre.jpg" alt="Sobre" class="section-img"> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5 section bg-light text-dark animated fadeIn">
+        <h2>História</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Explore nossa história.</p>
+            </div>
+            <div class="col-md-6">
+               <!-- <img src="historia.jpg" alt="História" class="section-img"> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5 section bg-light text-dark animated fadeIn">
+        <h2>Equipamentos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Veja os equipamentos que usamos em nossos shows.</p>
+            </div>
+            <div class="col-md-6">
+               <!-- <img src="equipamentos.jpg" alt="Equipamentos" class="section-img"> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <p class="text-center">&copy; 2023 Littledolly. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const navBar = document.querySelector('.navbar');
+            const darkModeIcon = document.getElementById('dark-mode-icon');
+            let isDarkMode = body.classList.contains('dark-mode');
+    
+            // Lista de elementos com classe 'section' que queremos alterar o tema
+            const sections = document.querySelectorAll('.section');
+    
+            if (isDarkMode) {
+                body.classList.remove('dark-mode');
+                navBar.classList.remove('navbar-dark');
+                navBar.classList.add('bg-dark');
+                darkModeIcon.classList.remove('fa-sun');
+                darkModeIcon.classList.add('fa-moon');
+    
+                // Altera o tema das seções para escuro
+                sections.forEach(section => {
+                    section.classList.remove('bg-dark');
+                    section.classList.remove('text-white');
+                    section.classList.add('bg-light');
+                    section.classList.add('text-dark');
+                });
+            } else {
+                body.classList.add('dark-mode');
+                navBar.classList.remove('bg-dark');
+                navBar.classList.add('navbar-dark');
+                darkModeIcon.classList.remove('fa-moon');
+                darkModeIcon.classList.add('fa-sun');
+    
+                // Altera o tema das seções para claro
+                sections.forEach(section => {
+                    section.classList.remove('bg-light');
+                    section.classList.remove('text-dark');
+                    section.classList.add('bg-dark');
+                    section.classList.add('text-white');
+                });
+            }
+    
+            localStorage.setItem('darkMode', !isDarkMode);
+        }
+    
+        window.addEventListener('load', function() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    
+            if (isDarkMode) {
+                toggleDarkMode();
+            }
+        });
+    
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+    
+</body>
+</html>
