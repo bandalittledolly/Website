@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 videoCard.innerHTML = `
                     <div class="card">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="${cleanURL}" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item w-100" src="${cleanURL}" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="card-body bg-secondary text-white">
                             <h5 class="card-title">${video.title}</h5>

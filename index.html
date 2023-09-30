@@ -5,34 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Littledolly</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=FONT_HERE&display=swap" rel="stylesheet">
 </head>
 
 <body class="dark-mode">
     <header class="navbar navbar-expand-lg navbar-dark">
         <nav class="container">
-            <a class="navbar-brand" href="/">Littledolly</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            <a style="font-family: FONT_HERE; font-size: 25px;" class="navbar-brand" href="/">Littledolly</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="artistas.html"><i class="fa-solid fa-microphone-lines"></i> Artistas</a></li>
                     <li class="nav-item"><a class="nav-link" href="bastidores.html"><i class="fa-solid fa-video"></i> Bastidores</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipamentos.html"><i class="fa-solid fa-guitar"></i> Equipamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobre"><i class="fa-solid fa-address-card"></i> Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#historia"><i class="fa-solid fa-book-open"></i> História</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section class="section-down container mt-5 section bg-dark text-white animate__animated">
+    <section class="w-auto section-down container mt-5 section bg-dark text-white animate__animated">
         <h2>Artistas</h2>
         <div class="row">
             <div class="col-md-6">
@@ -44,15 +48,15 @@
                     non dui nec ultricies. Maecenas mi dui, tempor aliquam lobortis id, posuere sed libero. Proin
                     pretium arcu quis diam sollicitudin dapibus. Nam ac mauris ornare odio pellentesque porttitor. Proin
                     tristique quis enim non tristique. Sed blandit ligula lectus, sed luctus libero ultricies eget.</p>
-                <a href="/artistas.html" class="btn btn-primary">Ver Todos os Artistas</a>
+                <a href="/artistas.html" class="btn btn-success">Ver Todos os Artistas</a>
             </div>
             <div class="col-md-6">
-                <img src="/imagens/artista.jpg" alt="Artista" class="section-img w-auto p-3">
+                <img src="/imagens/artista.jpg" alt="Artista" class="section-img w-75 p-2">
             </div>
         </div>
     </section>
 
-    <section class="section-left container mt-5 section bg-dark text-white animate__animated invisible">
+    <section class="w-auto section-left container mt-5 section bg-dark text-white animate__animated invisible">
         <h2>Bastidores dos Shows</h2>
         <div class="row">
             <div class="col-md-6">
@@ -64,7 +68,7 @@
                     non dui nec ultricies. Maecenas mi dui, tempor aliquam lobortis id, posuere sed libero. Proin
                     pretium arcu quis diam sollicitudin dapibus. Nam ac mauris ornare odio pellentesque porttitor. Proin
                     tristique quis enim non tristique. Sed blandit ligula lectus, sed luctus libero ultricies eget.</p>
-                <a href="/bastidores.html" class="btn btn-primary">Ver Todos os Bastidores</a>
+                <a href="/bastidores.html" class="btn btn-success">Ver Todos os Bastidores</a>
             </div>
             <div class="col-md-6">
                 <!-- <img src="bastidores.jpg" alt="Bastidores" class="section-img"> -->
@@ -72,10 +76,10 @@
         </div>
     </section>
 
-    <section class="section-right container mt-5 section bg-dark text-white animate__animated invisible">
+    <section id="sobre" class="w-auto section-right container mt-5 section bg-dark text-white animate__animated invisible">
         <h2>Sobre</h2>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo ligula, ultrices imperdiet
                     vehicula ac, eleifend a nulla. Fusce porttitor quam dolor. Quisque pulvinar sed nunc at malesuada.
                     Vestibulum in ligula posuere, facilisis diam et, tincidunt elit. Ut sed tempor ex. Pellentesque urna
@@ -91,10 +95,10 @@
         </div>
     </section>
 
-    <section class="section-left container mt-5 section bg-dark text-white animate__animated invisible">
+    <section id="historia" class="w-auto section-left container mt-5 section bg-dark text-white animate__animated invisible">
         <h2>História</h2>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo ligula, ultrices imperdiet
                     vehicula ac, eleifend a nulla. Fusce porttitor quam dolor. Quisque pulvinar sed nunc at malesuada.
                     Vestibulum in ligula posuere, facilisis diam et, tincidunt elit. Ut sed tempor ex. Pellentesque urna
@@ -110,7 +114,7 @@
         </div>
     </section>
 
-    <section class="section-right hide container mt-5 section bg-dark text-white animate__animated invisible">
+    <section class="w-auto section-right hide container mt-5 section bg-dark text-white animate__animated invisible">
         <h2>Equipamentos</h2>
         <div class="row">
             <div class="col-md-6">
@@ -122,7 +126,7 @@
                     non dui nec ultricies. Maecenas mi dui, tempor aliquam lobortis id, posuere sed libero. Proin
                     pretium arcu quis diam sollicitudin dapibus. Nam ac mauris ornare odio pellentesque porttitor. Proin
                     tristique quis enim non tristique. Sed blandit ligula lectus, sed luctus libero ultricies eget.</p>
-                    <a href="/equipamentos.html" class="btn btn-primary">Ver Todos os Equipamentos</a>
+                <a href="/equipamentos.html" class="btn btn-success">Ver Todos os Equipamentos</a>
             </div>
             <div class="col-md-6">
                 <!-- <img src="equipamentos.jpg" alt="Equipamentos" class="section-img"> -->
@@ -133,30 +137,34 @@
     <footer class="bg-dark text-white py-3">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center text-md-left">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 <a href="/">Littledolly</a>. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center">
                     <ul class="list-unstyled">
-                        <li><a href="/"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
                         <li><a href="artistas.html"><i class="fa-solid fa-microphone-lines"></i> Artistas</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 text-center">
-                    &copy; 2023 Littledolly. Todos os direitos reservados.
-                </div>
-                <div class="col-md-4 text-center text-md-right">
-                    <ul class="list-unstyled">
                         <li><a href="bastidores.html"><i class="fa-solid fa-video"></i> Bastidores</a></li>
                         <li><a href="equipamentos.html"><i class="fa-solid fa-guitar"></i> Equipamentos</a></li>
-                        <div>
-                            <a href="https://www.instagram.com/littledollybanda" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-instagram fa-lg"></i> Instram
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#sobre"><i class="fa-solid fa-address-card"></i> Sobre</a></li>
+                        <li><a href="index.html#historia"><i class="fa-solid fa-book-open"></i> História</a></li>
+                        <li>
+                            <a href="https://www.instagram.com/littledollybanda" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram fa-lg"></i> Instagram
                             </a>
-                        </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
