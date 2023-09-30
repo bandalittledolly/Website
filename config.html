@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Littledolly</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+    <header class="navbar navbar-expand-lg navbar-dark">
+        <nav class="container">
+            <a class="navbar-brand" href="/">Littledolly</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="artistas.html"><i class="fa-solid fa-microphone-lines"></i> Artistas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bastidores.html"><i class="fa-solid fa-video"></i> Bastidores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipamentos.html"><i class="fa-solid fa-guitar"></i> Equipamentos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mt-5 section bg-dark text-white animate__animated animate__fadeInLeft">
+        <h2>Converter Link de Vídeo em Embed</h2>
+        <h3>Essa página foi feita para ser usada para gerar a URL para ser usada no arquivo videos.json para os bastidores.</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="videoLink">Cole o link do vídeo:</label>
+                    <input type="text" class="form-control" id="videoLink" placeholder="Cole o link aqui">
+                </div>
+                <button class="btn btn-primary" id="embedButton">Converter em Embed</button>
+            </div>
+            <div class="col-md-6">
+                <div id="embedContainer">
+                    <!-- A URL de incorporação direta será exibida aqui -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-left">
+                    <ul class="list-unstyled">
+                        <li><a href="/"><i class="fa-solid fa-house"></i> Página Inicial</a></li>
+                        <li><a href="artistas.html"><i class="fa-solid fa-microphone-lines"></i> Artistas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    &copy; 2023 Littledolly. Todos os direitos reservados.
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <ul class="list-unstyled">
+                        <li><a href="bastidores.html"><i class="fa-solid fa-video"></i> Bastidores</a></li>
+                        <li><a href="equipamentos.html"><i class="fa-solid fa-guitar"></i> Equipamentos</a></li>
+                        <div>
+                            <a href="https://www.instagram.com/littledollybanda" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram fa-lg"></i> Instram
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videoLinkInput = document.getElementById("videoLink");
+            const embedButton = document.getElementById("embedButton");
+            const embedContainer = document.getElementById("embedContainer");
+
+            embedButton.addEventListener("click", function () {
+                const videoLink = videoLinkInput.value.trim();
+
+                if (isValidVideoLink(videoLink)) {
+                    const embedURL = generateEmbedURL(videoLink);
+
+                    const cleanURL = removePPParameter(embedURL);
+
+                    copyToClipboard(embedURL);
+
+                    embedContainer.innerHTML = `<h3 class="text-light">${cleanURL}</h3>`;
+
+                    showPopup("URL Copiada.");
+
+                } else {
+                    embedContainer.innerHTML = `<p class="text-danger">Link de vídeo inválido.</p>`;
+                }
+            });
+
+            function isValidVideoLink(link) {
+                return link.includes("https://www.youtube.com/watch?v=") || link.includes("https://youtu.be/");
+            }
+
+            function generateEmbedURL(link) {
+                const videoId = link.includes("https://youtu.be/") ? link.split("/").pop() : link.split("v=").pop();
+                return `https://www.youtube.com/embed/${videoId}`;
+            }
+
+            function copyToClipboard(text) {
+                const textarea = document.createElement("textarea");
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+            }
+
+            function removePPParameter(url) {
+                return url.replace(/&pp=[^&]*/g, "");
+            }
+
+            function showPopup(message) {
+                alert(message);
+            }
+        });
+    </script>
+</body>
+
+</html>

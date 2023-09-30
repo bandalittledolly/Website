@@ -1,8 +1,3 @@
-body.light-mode {
-    background-color: #f8f9fa;
-    color: #333;
-}
-
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -16,18 +11,9 @@ body.dark-mode {
     background-color: #fff;
 }
 
-#dark-mode-toggle {
-    background-color: #333;
-    color: #fff;
-    border: none;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #555;
-}
-
 .section {
-    background-color: #fff;
+    background-color: #333;
+    color: #ffffff;
     padding: 40px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -37,12 +23,12 @@ body.dark-mode {
 .section h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff;
 }
 
 .section p {
     font-size: 16px;
-    color: #555;
+    color: #ccc;
 }
 
 .section-img {
@@ -50,4 +36,13 @@ body.dark-mode {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff9900;
 }

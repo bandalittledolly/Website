@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Bastidores 1",
+        "description": "Descrição do bastidor 1",
+        "videoURL": "https://www.youtube.com/embed/VIDEO_ID_1"
+    },
+    {
+        "title": "Bastidores 2",
+        "description": "Descrição do bastidor 2",
+        "videoURL": "https://www.youtube.com/embed/VIDEO_ID_2"
+    },
+    {
+        "title": "Bastidores 3",
+        "description": "Descrição do bastidor 3",
+        "videoURL": "https://www.youtube.com/embed/VIDEO_ID_3"
+    }
+]
