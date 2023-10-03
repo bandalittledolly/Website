@@ -45,33 +45,35 @@ footer a {
 }
 
 .nav-item a:hover {
-    color: #FFD700;
+    color: purple;
     transition: color 0.3s ease;
 }
 
 .footer:hover {
-    color: #FFD700;
+    color: purple;
     transition: color 0.3s ease;
 }
 
 .section:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Altere para a cor de fundo desejada */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave da cor de fundo */
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
 }
 
 .section-img {
-    transition: transform 0.3s ease; /* Adiciona uma transição suave de transformação */
+    transition: transform 0.3s ease; 
 }
 
 .section-img:hover {
-    transform: scale(1.1); /* Altere o valor para ajustar o nível de zoom desejado */
+    transform: scale(1.1); 
 }
 
 .btn {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Adicione uma sombra suave */
-    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave da sombra */
+    background-color: purple;
+    color: white;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; 
 }
 
 .btn:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Altere os valores para ajustar a sombra desejada */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: purple;
 }
