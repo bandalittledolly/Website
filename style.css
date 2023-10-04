@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'LetristaScript';
+    src: url('/font/LetristaScript.woff') format('woff'),
+        url('/font/LetristaScript.woff2') format('woff2'),
+        url('/font/LetristaScript.eot'),
+        url('/font/LetristaScript.eot?#iefix') format('embedded-opentype'),
+        url('/font/LetristaScript.otf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -40,7 +53,7 @@ body.dark-mode {
 
 footer a {
     color: #ffffff;
-    text-decoration: none; 
+    text-decoration: none;
     transition: color 0.3s;
 }
 
@@ -60,20 +73,39 @@ footer a {
 }
 
 .section-img {
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .section-img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .btn {
     background-color: purple;
     color: white;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; 
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .btn:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     background-color: purple;
+}
+
+.btn-custom-border {
+    background-color: transparent;
+    border: 2px solid #800080;
+    color: #800080;
+}
+
+.btn-custom-border:hover {
+    background-color: #800080;
+    color: #fff;
+}
+
+footer-404 a {
+    transition: color 0.3s;
+}
+
+.footer-404:hover {
+    color: purple;
 }
