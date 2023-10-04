@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -77,3 +78,84 @@ footer a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     background-color: purple;
 }
+=======
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.section {
+    background-color: #333;
+    color: #ffffff;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.section p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.section-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: purple;
+    transition: color 0.3s ease;
+}
+
+.footer:hover {
+    color: purple;
+    transition: color 0.3s ease;
+}
+
+.section:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+.section-img {
+    transition: transform 0.3s ease; 
+}
+
+.section-img:hover {
+    transform: scale(1.1); 
+}
+
+.btn {
+    background-color: purple;
+    color: white;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; 
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: purple;
+}
+>>>>>>> fa635d3b50a7ae3ce05c934e8ce53650868d6a98
