@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'LetristaScript';
-    src: url('/font/LetristaScript.woff') format('woff'),
-        url('/font/LetristaScript.woff2') format('woff2'),
-        url('/font/LetristaScript.eot'),
-        url('/font/LetristaScript.eot?#iefix') format('embedded-opentype'),
-        url('/font/LetristaScript.otf') format('truetype');
-
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -108,4 +95,17 @@ footer-404 a {
 
 .footer-404:hover {
     color: purple;
+}
+
+@font-face {
+    font-family: 'LetristaScript';
+    src: url('/font/LetristaScript.woff') format('woff'),
+        url('/font/LetristaScript.woff2') format('woff2'),
+        url('/font/LetristaScript.eot'),
+        url('/font/LetristaScript.eot?#iefix') format('embedded-opentype'),
+        url('/font/LetristaScript.otf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
