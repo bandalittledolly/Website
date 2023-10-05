@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /404
 Disallow: /404.html
-Disallow: /outros/Rider Técnico - Little Dolly.pdf
+Disallow: /arquivos/outros/Rider Técnico - Little Dolly.pdf
 Sitemap: https://littledolly.com.br/sitemap.xml
