@@ -51,15 +51,15 @@ body.dark-mode {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
 .nav-item a:hover {
     color: purple;
     transition: color 0.3s ease;
+}
+
+footer a {
+    transition: color 0.3s;
+    text-decoration: none;
+    color: white;
 }
 
 .footer:hover {
@@ -103,10 +103,10 @@ footer a {
     transform: scale(1.1);
 }
 
-footer-404 a {
-    transition: color 0.3s;
+.navbar-nav .nav-item {
+    margin-right: 10px;
 }
 
-.footer-404:hover {
-    color: purple;
+.container {
+    max-width: 100%;
 }
