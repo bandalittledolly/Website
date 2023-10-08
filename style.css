@@ -102,11 +102,3 @@ footer a {
     color: #fff;
     transform: scale(1.1);
 }
-
-.navbar-nav .nav-item {
-    margin-right: 10px;
-}
-
-.container {
-    max-width: 100%;
-}
