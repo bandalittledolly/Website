@@ -20,12 +20,6 @@ O nosso site oferece várias seções e recursos interessantes:
 
 - **Contato** Alguns meios de contactar nossa banda.
 
-## Como Usar
-
-Para navegar pelo site, você pode clicar no link abaixo.
-
-[Clique Aqui](https://littledolly.com.br/)
-
 ## Contato
 
 [Instagram](https://www.instagram.com/littledollybanda)
