@@ -1,6 +1,6 @@
 @font-face {
     font-family: LetristaScript;
-    src: url(arquivos/font/LetristaScript.woff) format(woff), url(arquivos/font/LetristaScript.woff2) format(woff2), url(arquivos/font/LetristaScript.eot), url(arquivos/font/LetristaScript.eot?#iefix) format(embedded-opentype), url(arquivos/font/LetristaScript.otf) format(truetype);
+    src: url(font/LetristaScript.woff) format(woff), url(font/LetristaScript.woff2) format(woff2), url(font/LetristaScript.eot), url(font/LetristaScript.eot?#iefix) format(embedded-opentype), url(font/LetristaScript.otf) format(truetype);
     font-weight: 400;
     font-style: normal;
     font-display: swap;
