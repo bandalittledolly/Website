@@ -1,57 +1,34 @@
-function openFullscreenImage(imageUrl) {
-    var container = document.createElement("div");
-    container.style.position = "fixed";
-    container.style.top = "0";
-    container.style.left = "0";
-    container.style.width = "100%";
-    container.style.height = "100%";
-    container.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-    container.style.display = "flex";
-    container.style.justifyContent = "center";
-    container.style.alignItems = "center";
-    container.style.cursor = "pointer";
+$(document).ready(function () {
+    function openFullscreenImage(imageUrl) {
+        var container = $("<div>").addClass("fullscreen-image");
+        var img = $("<img>").attr("src", imageUrl);
+        container.click(function (event) {
+            if (event.target === this) {
+                $(this).remove();
+            }
+        });
 
-    var img = document.createElement("img");
-    img.src = imageUrl;
-    img.style.maxWidth = "90%"; 
-    img.style.maxHeight = "90vh";
+        var closeButton = $("<span>").html("&times;").addClass("close-button");
+        closeButton.click(function () {
+            container.remove();
+        });
 
-    container.addEventListener("click", function (event) {
-        if (event.target === container) {
-            document.body.removeChild(container);
-        }
-    });
+        closeButton.css("cursor", "pointer"); // Defina o cursor apenas para o botão "X"
 
-    var closeButton = document.createElement("span");
-    closeButton.innerHTML = "&times;";
-    closeButton.style.position = "absolute";
-    closeButton.style.top = "20px";
-    closeButton.style.right = "20px";
-    closeButton.style.fontSize = "30px";
-    closeButton.style.color = "#fff";
-    closeButton.style.cursor = "pointer";
+        container.append(img, closeButton);
+        $("body").append(container);
+    }
 
-    closeButton.onclick = function () {
-        document.body.removeChild(container);
-    };
+    function isMobile() {
+        return $(window).width() <= 768;
+    }
 
-    container.appendChild(img);
-    container.appendChild(closeButton);
-    document.body.appendChild(container);
-}
-
-function isMobile() {
-    return window.innerWidth <= 768;
-}
-
-var images = document.querySelectorAll(".section-img, .img-fluid");
-images.forEach(function (image) {
-    image.addEventListener("click", function () {
-        var imageUrl = image.src;
+    var images = $(".section-img, .img-fluid");
+    images.click(function () {
+        var imageUrl = $(this).attr("src");
         openFullscreenImage(imageUrl);
         if (isMobile()) {
-            document.querySelector("img[src='" + imageUrl + "']").style.maxWidth = "90%";
-            document.querySelector("img[src='" + imageUrl + "']").style.maxHeight = "90vh";
+            $("img[src='" + imageUrl + "']").css({ "max-width": "90%", "max-height": "90vh" });
         }
     });
 });

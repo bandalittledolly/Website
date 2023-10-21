@@ -1,92 +1,103 @@
 @font-face {
     font-family: LetristaScript;
-    src: url(font/LetristaScript.woff) format(woff), url(font/LetristaScript.woff2) format(woff2), url(font/LetristaScript.eot), url(font/LetristaScript.eot?#iefix) format(embedded-opentype), url(font/LetristaScript.otf) format(truetype);
+    src: url("font/LetristaScript.woff") format("woff"), url(font/LetristaScript.woff2) format("woff2"), url(font/LetristaScript.eot), url(font/LetristaScript.eot?#iefix) format("embedded-opentype"), url(font/LetristaScript.otf) format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
-
 body.dark-mode {
     background-color: #1a1a1a;
     color: #fff;
 }
-
 .navbar {
     background-color: #333;
 }
-
 .navbar-dark .navbar-toggler-icon {
     background-color: #fff;
 }
-
 .section {
     background-color: #333;
     color: #fff;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     padding: 40px;
 }
-
 .section h2 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #fff;
 }
-
 .section p {
     font-size: 16px;
     color: #ccc;
 }
-
 .section-img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     transition: transform .3s ease;
 }
-
 .section-img:hover {
     transform: scale(1.1);
 }
-
 footer a {
     transition: color .3s;
     text-decoration: none;
-    color: #FFF;
+    color: #fff;
 }
-
 .section:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, .8);
     transition: background-color .3s ease;
 }
-
 .btn {
     background-color: purple;
-    color: #FFF;
+    color: #fff;
     transition: box-shadow .3s ease, background-color .3s ease;
 }
-
 .btn:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     background-color: purple;
 }
-
 .btn-custom-border {
     border: 2px solid purple;
     color: #fff;
     transition: background-color .3s color .3s transform .3s;
 }
-
 .btn-custom-border:hover {
     background-color: purple;
     color: #fff;
     transform: scale(1.1);
 }
-
-.nav-item a:hover,
-.footer:hover {
+.footer:hover, .nav-item a:hover {
     color: purple;
     transition: color .3s ease;
+}
+.fullscreen-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: auto;
+}
+.fullscreen-image img {
+    max-width: 90%;
+    max-height: 90vh;
+}
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+}
+.close-button:hover {
+    cursor: pointer;
 }
