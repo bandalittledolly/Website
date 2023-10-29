@@ -27,3 +27,7 @@ O nosso site oferece várias seções e recursos interessantes:
 ## Contato 📫
 
 Saiba mais sobre os meios de contato em [Meios de contatos](https://littledolly.com.br/contato) 📨📲.
+
+## Suguestões 🤔
+
+Caso tenha alguma suguestão para o site pode enviar uma [Issues](https://github.com/bandalittledolly/Website/issues).
