@@ -91,13 +91,13 @@ footer a,
     width: 100%;
     height: auto;
 }
-.social-btns {
+.social {
     justify-content: center;
     align-items: center;
     width: 100%;
     color: white;
 }
-.social-btns-a {
+.social a {
     margin: 0 15px;
     font-size: 30px;
     color: white;
