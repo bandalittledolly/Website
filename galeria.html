@@ -48,7 +48,7 @@
 </head>
 
 <body class="dark-mode">
-    <header class="navbar navbar-expand-lg navbar-dark">
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
         <nav class="container">
             <a style="font-family: 'LetristaScript'; font-size: 26px;" class="navbar-brand" href="/">Little Dolly</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -73,7 +73,7 @@
         <h2>Galeria de Fotos</h2>
         <div class="row" id="photos-container">
             <!-- As fotos serão carregadas Aqui -->
-        </div>
+        </div>        
     </section>
 
     <footer class="bg-dark text-white py-3">
@@ -104,6 +104,7 @@
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script>
+        
         function loadPhotosFromJSON() {
             const photosContainer = document.getElementById('photos-container');
 
@@ -117,12 +118,11 @@
                         const img = document.createElement('img');
                         img.src = photo.imageSrc;
                         img.alt = photo.title;
-                        img.className = "w-75 section-img"
+                        img.className = "w-75 section-img img-fluid"
 
                         img.addEventListener('click', function () {
-                            var imageUrl = img.src
-                            openFullscreenImage(imageUrl);
-                        });
+                        openFullscreenImage(photo.imageSrc);
+                    });
 
                         photoElement.appendChild(img);
 
@@ -131,6 +131,7 @@
                 })
                 .catch(error => console.error('Erro ao carregar os dados da galeria:', error));
         }
+
         window.addEventListener('load', loadPhotosFromJSON);
     </script>
 </body>
