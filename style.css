@@ -92,13 +92,22 @@ footer a,
     height: auto;
 }
 .social {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    color: white;
 }
 .social a {
     margin: 0 15px;
     font-size: 40px;
     color: white;
+    transition: all .3s ease;
+}
+
+.social a:hover {
+    color: purple;
+    transform: scale(1.2);
 }
