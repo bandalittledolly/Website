@@ -103,46 +103,65 @@
         function formatarData(data) {
             return new Intl.DateTimeFormat('pt-BR').format(new Date(data));
         }
-    
+
         function carregarCalendario() {
             const calendario = document.getElementById('calendario');
-    
+
             const apiUrl = "https://api.littledolly.com.br/events";
-    
+
             fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
-            .then(response => response.json())
-            .then(eventosDaAPI => {
-                if (eventosDaAPI.length === 0) {
-                    const mensagem = document.createElement('p');
-                    mensagem.textContent = 'Não há shows programados no momento.';
-                    calendario.appendChild(mensagem);
-                } else {
-                    eventosDaAPI.forEach(evento => {
-                        const div = document.createElement('div');
-                        div.className = 'col-md-4 mb-4';
-                        const dataFormatada = formatarData(evento.date);
-                        div.innerHTML = `
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-dark">Local: ${evento.location}</h5>
-                                    <p class="card-text text-dark">Data: ${dataFormatada}</p>
-                                    <p class="card-text text-dark">Hora: ${evento.time}</p>
-                                </div>
-                            </div>
-                        `;
-                        calendario.appendChild(div);
-                    });
-                }
-            })
-            .catch(error => console.error('Erro ao carregar dados do calendário: ', error));
+                .then(response => response.json())
+                .then(eventosDaAPI => {
+                    if (eventosDaAPI.length === 0) {
+                        const mensagem = document.createElement('p');
+                        mensagem.textContent = 'Não há shows programados no momento.';
+                        calendario.appendChild(mensagem);
+                    } else {
+                        eventosDaAPI.forEach(evento => {
+                            const div = document.createElement('div');
+                            div.className = 'col-md-4 mb-4';
+
+                            const dataFormatada = formatarData(evento.date);
+
+                            const card = document.createElement('div');
+                            card.className = 'card';
+
+                            const cardBody = document.createElement('div');
+                            cardBody.className = 'card-body';
+
+                            const titulo = document.createElement('h5');
+                            titulo.className = 'card-title text-dark';
+                            titulo.textContent = 'Local: ' + evento.location;
+
+                            const textoData = document.createElement('p');
+                            textoData.className = 'card-text text-dark';
+                            textoData.textContent = 'Data: ' + dataFormatada;
+
+                            const textoHora = document.createElement('p');
+                            textoHora.className = 'card-text text-dark';
+                            textoHora.textContent = 'Hora: ' + evento.time;
+
+                            cardBody.appendChild(titulo);
+                            cardBody.appendChild(textoData);
+                            cardBody.appendChild(textoHora);
+
+                            card.appendChild(cardBody);
+                            div.appendChild(card);
+
+                            calendario.appendChild(div);
+                        });
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar dados do calendário: ', error));
         }
-    
+
         carregarCalendario();
+
     </script>
 </body>
 
