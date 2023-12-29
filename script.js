@@ -13,7 +13,7 @@ $(document).ready(function () {
             container.remove();
         });
 
-        closeButton.css("cursor", "pointer"); // Defina o cursor apenas para o botão "X"
+        closeButton.css("cursor", "pointer");
 
         container.append(img, closeButton);
         $("body").append(container);

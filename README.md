@@ -20,8 +20,6 @@ O nosso site oferece várias seções e recursos interessantes:
 
 - **Galeria:** Mergulhe em nossa galeria de fotos e vídeos exclusivos, capturando momentos memoráveis em nossa carreira 📷📽️.
 
-- **Calendário:** Consulte as datas de nossos próximos shows e eventos imperdíveis 🗓️🎶.
-
 - **Contato:** Encontre diferentes maneiras de se conectar conosco e compartilhar sua paixão pela música 📞📧.
 
 ## Contato 📫
